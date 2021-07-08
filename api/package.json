@@ -6,14 +6,16 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "node ./src/start.js",
-    "start:dev": "nodemon --inspect src/start.js",
+    "start": "node -r dotenv/config ./src/start.js",
+    "start:dev": "nodemon --inspect -r dotenv/config src/start.js",
     "test": "jest",
     "test:watch": "jest --watch",
-    "lint": "eslint -c .eslintrc src __tests__"
+    "lint": "eslint -c .eslintrc src __tests__",
+    "postinstall": "node scripts/init-env.js"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1"
   },
   "devDependencies": {
