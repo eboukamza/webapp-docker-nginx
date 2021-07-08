@@ -1,7 +1,11 @@
-const express = require('express');
-const bodyParser = require('body-parser');
+const express = require('express')
+const bodyParser = require('body-parser')
 
-const app = express();
-app.use(bodyParser.json());
+const helloRoute = require('./hello.route')
 
-module.exports = app;
+const app = express()
+app.use(bodyParser.json())
+
+app.use('/api/hello', helloRoute)
+
+module.exports = app
