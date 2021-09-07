@@ -2,7 +2,7 @@
 
 ### Technologies
 
- - Angular
+ - Vue.js
  - Node
  - Nginx
 
@@ -11,16 +11,6 @@
  - NodeJS 12+
  - Yarn
  - Docker
-
-### Run as docker container
-
-you can run this project as docker container
-
-    # build docker image if first time of if you have made changes
-    docker build --no-cache -f Dockerfile -t fluctuat-web .
-
-    # run fluctuat-web container
-    docker run --rm --network="host" fluctuat-web
 
 ## Installation
 
